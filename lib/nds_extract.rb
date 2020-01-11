@@ -56,13 +56,13 @@ def movies_with_director_key(name, movies_collection)
     :release_year =>2008,
     :studio "Paramount"],
     :director_name "John Legend"
-  }
+  },
   {
     :title "Spartan",
       :worldwide_gross => 6000000 ,
     :release_year =>2007,
     :studio "Mage Entertainment"],
-    :director_name "Lucas Jan"}
+    :director_name "Lucas Jan"},
     {
       :title "Rush hour2",
       :worldwide_gross => 10000000 ,
@@ -72,6 +72,7 @@ def movies_with_director_key(name, movies_collection)
     }
     ]
 end
+
 
 
 
