@@ -5,19 +5,17 @@ require 'directors_database'
 # [3,4,5], [6]] => [1,2,3,4,5,6].
 
 def flatten_a_o_a(aoa)
-  result = []
-  i = 0
-
-  while i < aoa.length do
-    k = 0
-    while k < aoa[i].length do
-      result << aoa[i][k]
-      k += 1
-    end
-    i += 1
+    array = []
+    first_array = 0
+    while first_array < aoa.length do 
+      inner_array = 0
+    while inner_array < aoa[first_array].length do
+      array << aoa[first_array][inner_array]
+      inner_array += 1
+   end
+    first_array += 1
   end
-
-  result
+  array
 end
 
 def movie_with_director_name(director_name, movie_data)
@@ -51,13 +49,13 @@ def movies_with_director_key(name, movies_collection)
   result = []
   index = 0
 
-  while index < movies_collection.length do
+  while index < movies_collection.length do 
     movie_data = movies_collection[index]
     result << movie_with_director_name(name, movie_data)
     index += 1
   end
-result
- end
+  result 
+end
 
 def gross_per_studio(collection)
   # GOAL: Given an Array of Hashes where each Hash represents a movie,
@@ -98,6 +96,8 @@ def movies_with_directors_set(source)
   #
   # Array of Arrays containing all of a director's movies. Each movie will need
   # to have a :director_name key added to it.
+  
+
   index = 0
   a_o_a_movies_by_dir = []
 
@@ -109,6 +109,7 @@ def movies_with_directors_set(source)
     index += 1
   end
 a_o_a_movies_by_dir
+  
   end
   
 
